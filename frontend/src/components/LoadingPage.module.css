@@ -1,0 +1,138 @@
+.loadingContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  font-family: "Arial", sans-serif;
+}
+
+.content {
+  text-align: center;
+  color: white;
+}
+
+.logo {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  animation: fadeIn 1s ease-in;
+}
+
+.spinnerContainer {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 30px;
+}
+
+.spinner {
+  width: 100%;
+  height: 100%;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-top: 4px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.spinnerInner {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-top: 4px solid #64b5f6;
+  border-radius: 50%;
+  animation: spinReverse 0.8s linear infinite;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: slideUp 0.5s ease-out forwards 0.5s;
+}
+
+.progressBar {
+  width: 200px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  background: #64b5f6;
+  animation: progress 2s ease-in-out infinite;
+}
+
+.message {
+  font-size: 16px;
+  opacity: 0.8;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

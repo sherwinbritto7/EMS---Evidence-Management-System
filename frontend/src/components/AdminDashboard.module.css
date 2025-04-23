@@ -1,0 +1,195 @@
+/* AdminDashboard.module.css */
+
+.dashboardContainer {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%; /* Make it take full width */
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.innerContainer {
+  width: 90%; /* Keep the elements the same size */
+  max-width: 900px; /* Maintain a max-width */
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+.statsGrid {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.statTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.statValue {
+  font-size: 28px;
+  font-weight: bold;
+  color: #f8e71c;
+}
+
+.contentSection h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #ffcccb;
+  text-transform: uppercase;
+}
+
+.userList {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center the cards */
+  gap: 15px;
+  width: 100%;
+}
+
+.userCard {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: space-between; /* Aligns content left and right */
+  align-items: center;
+}
+
+.userCard:hover {
+  transform: translateY(-5px);
+}
+
+.userInfo {
+  text-align: left; /* Aligns user data to the left */
+  flex-grow: 1;
+}
+
+.username {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+}
+
+.userRole {
+  font-size: 16px;
+  color: #f8e71c;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.userStatus {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1abc9c;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.actionButton {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.primaryButton {
+  background: #3498db;
+  color: white;
+}
+
+.primaryButton:hover {
+  background: #2980b9;
+  transform: scale(1.05);
+}
+
+.secondaryButton {
+  background: #e74c3c;
+  color: white;
+}
+
+.secondaryButton:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .statsGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .userList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+  }
+}
+
+/* Subtle glowing effect */
+@keyframes glow {
+  0% {
+    text-shadow: 3px 3px 8px rgba(255, 94, 98, 0.5);
+  }
+  100% {
+    text-shadow: 4px 4px 12px rgba(255, 94, 98, 0.8);
+  }
+}

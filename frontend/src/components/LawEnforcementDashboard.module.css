@@ -1,0 +1,202 @@
+/* LawEnforcementDashboard.module.css */
+
+.dashboard-container {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: #ecf0f1;
+  width: 100%;
+  min-height: 100vh; /* Ensure full viewport height */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.innerContainer {
+  margin: 10px;
+  width: 90%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Keep the content inside properly aligned */
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+.dashboard-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.wallet-address {
+  font-size: 14px;
+  color: #000000;
+}
+
+.content-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.evidence-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #ecf0f1;
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+.submit-button {
+  padding: 10px;
+  background: #27ae60;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #2ecc71;
+}
+
+.transaction-section {
+  margin-top: 20px;
+}
+
+.transaction-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transaction-list th,
+.transaction-list td {
+  padding: 10px;
+  border-bottom: 1px solid #7f8c8d;
+  text-align: left;
+}
+
+.transaction-list th {
+  background: #2980b9;
+  color: white;
+}
+
+.hash-link {
+  color: #1abc9c;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.hash-link:hover {
+  color: #16a085;
+}
+
+.address-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.copy-button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.copy-button:hover {
+  background: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .dashboard-title {
+    font-size: 20px;
+  }
+
+  .wallet-address {
+    font-size: 12px;
+  }
+
+  .evidence-form {
+    gap: 8px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .transaction-list th,
+  .transaction-list td {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-title {
+    font-size: 18px;
+  }
+
+  .wallet-address {
+    font-size: 10px;
+  }
+
+  .submit-button {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .transaction-list th,
+  .transaction-list td {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
